@@ -8,8 +8,8 @@ function updateSiteLink(){const c=cfg();if(c.owner&&c.repo){const url=c.repo===c
 function headers(){return {'Accept':'application/vnd.github+json','Authorization':'Bearer '+cfg().token,'X-GitHub-Api-Version':'2026-03-10','Content-Type':'application/json'}}
 async function api(path,opt={}){const r=await fetch('https://api.github.com'+path,{...opt,headers:{...headers(),...(opt.headers||{})}});let d={};try{d=await r.json()}catch{}if(!r.ok)throw new Error(d.message||('GitHub API '+r.status));return d}
 async function getFile(path){return api(`/repos/${encodeURIComponent(cfg().owner)}/${encodeURIComponent(cfg().repo)}/contents/${path}?ref=${encodeURIComponent(cfg().branch)}`)}
-function b64(bytes){const u8=bytes instanceof ArrayBuffer?new Uint8Array(bytes):bytes;let bin='';const chunk=0x8000;for(let i=0;i<u8.length;i+=chunk)bin+=String.fromCharCode(...u8.subarray(i,Math.min(i+chunk,u8.length)));return btoa(bin)}function decodeBase64(s){const bin=atob(s.replace(/\n/g,''));const bytes=new Uint8Array(bin.length);for(let i=0;i<bin.length;i++)bytes[i]=bin.charCodeAt(i);return new TextDecoder().decode(bytes)}
-
+function decodeBase64(s){const bin=atob(s.replace(/\n/g,''));const bytes=new Uint8Array(bin.length);for(let i=0;i<bin.length;i++)bytes[i]=bin.charCodeAt(i);return new TextDecoder().decode(bytes)}
+function b64(bytes){const u8=bytes instanceof ArrayBuffer?new Uint8Array(bytes):bytes;let bin='';const chunk=0x8000;for(let i=0;i<u8.length;i+=chunk)bin+=String.fromCharCode(...u8.subarray(i,Math.min(i+chunk,u8.length)));return btoa(bin)}
 async function putFile(path,bytes,message,sha){const body={message,content:b64(bytes),branch:cfg().branch};if(sha)body.sha=sha;return api(`/repos/${encodeURIComponent(cfg().owner)}/${encodeURIComponent(cfg().repo)}/contents/${path}`,{method:'PUT',body:JSON.stringify(body)})}
 async function publishText(path,text,message){let sha=null;try{sha=(await getFile(path)).sha}catch(e){if(!String(e.message).includes('Not Found'))throw e}return putFile(path,new TextEncoder().encode(text),message,sha)}
 function normalize(){return JSON.stringify(store,null,2)}
