@@ -5,6 +5,10 @@
     {
       "id": "catfe0049a5a6",
       "name": "香香软软的原味袜子"
+    },
+    {
+      "id": "cata553d056bd",
+      "name": "调教定制视频❤小狗专享"
     }
   ],
   "products": [
@@ -16,6 +20,17 @@
       "desc": "",
       "images": [
         "assets/products/p09f71990f613-1790501199248.webp"
+      ],
+      "visible": true
+    },
+    {
+      "id": "p4b17c9c34727",
+      "categoryId": "catfe0049a5a6",
+      "name": "谷风天音定制视频",
+      "price": 138,
+      "desc": "",
+      "images": [
+        "assets/products/p4b17c9c34727-1790501349630.webp"
       ],
       "visible": true
     }
