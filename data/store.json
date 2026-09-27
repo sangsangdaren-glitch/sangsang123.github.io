@@ -21,6 +21,10 @@
     {
       "id": "cat9a08cd9b07",
       "name": "食用系列饮用"
+    },
+    {
+      "id": "cat2308ebff52",
+      "name": "毛巾牙刷系列"
     }
   ],
   "products": [
@@ -616,6 +620,89 @@
       "images": [
         "assets/products/pabffd694ddb8-1790504484191.webp"
       ],
+      "visible": true
+    },
+    {
+      "id": "p8655c0045a7e",
+      "categoryId": "cat09081a4917",
+      "name": "内裤",
+      "price": 99,
+      "desc": "",
+      "images": [
+        "assets/products/p8655c0045a7e-1790507513568.webp"
+      ],
+      "visible": true
+    },
+    {
+      "id": "pd77f35eaca25",
+      "categoryId": "cat09081a4917",
+      "name": "胸罩",
+      "price": 99,
+      "desc": "",
+      "images": [
+        "assets/products/pd77f35eaca25-1790507528412.webp"
+      ],
+      "visible": true
+    },
+    {
+      "id": "p9aeb0205ad4a",
+      "categoryId": "catfe0049a5a6",
+      "name": "蕾丝网袜",
+      "price": 98,
+      "desc": "",
+      "images": [
+        "assets/products/p9aeb0205ad4a-1790507543595.webp"
+      ],
+      "visible": true
+    },
+    {
+      "id": "p58d0a24131e2",
+      "categoryId": "catfe0049a5a6",
+      "name": "花边袜",
+      "price": 0,
+      "desc": "",
+      "images": [
+        "assets/products/p58d0a24131e2-1790507558706.webp"
+      ],
+      "visible": true
+    },
+    {
+      "id": "pfc728b309206",
+      "categoryId": "cat9a08cd9b07",
+      "name": "脚踩面包/口嚼面包",
+      "price": 68,
+      "desc": "",
+      "images": [
+        "assets/products/pfc728b309206-1790508071388.webp",
+        "assets/products/pfc728b309206-1790508075359.webp"
+      ],
+      "visible": true
+    },
+    {
+      "id": "p25150cd3045e",
+      "categoryId": "cat9a08cd9b07",
+      "name": "漱口水/洗脚水",
+      "price": 68,
+      "desc": "",
+      "images": [],
+      "visible": true
+    },
+    {
+      "id": "p5b7c5eb98ee2",
+      "categoryId": "cat2308ebff52",
+      "name": "擦脚毛巾/洗脸毛巾",
+      "price": 100,
+      "desc": "已用一到三个月",
+      "images": [],
+      "visible": true
+    },
+    {
+      "id": "pd2d8e23714c2",
+      "categoryId": "cat2308ebff52",
+      "name": "牙刷",
+      "price": 68,
+      "desc": "已用一到三个月",
+      "images": [],
       "visible": true
     }
   ],
