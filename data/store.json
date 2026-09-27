@@ -524,7 +524,7 @@
     },
     {
       "id": "p44340006606d",
-      "categoryId": "catfe0049a5a6",
+      "categoryId": "catad7a3b5d5f",
       "name": "玛丽珍皮鞋",
       "price": 158,
       "desc": "",
@@ -535,7 +535,7 @@
     },
     {
       "id": "pda8d76d2133f",
-      "categoryId": "catfe0049a5a6",
+      "categoryId": "catad7a3b5d5f",
       "name": "黑色高跟小皮鞋",
       "price": 158,
       "desc": "",
@@ -546,7 +546,7 @@
     },
     {
       "id": "pb5d29ddc5270",
-      "categoryId": "catfe0049a5a6",
+      "categoryId": "catad7a3b5d5f",
       "name": "缎面高跟鞋❤",
       "price": 188,
       "desc": "",
@@ -557,7 +557,7 @@
     },
     {
       "id": "pd2a8066b0555",
-      "categoryId": "catfe0049a5a6",
+      "categoryId": "catad7a3b5d5f",
       "name": "透明高跟鞋",
       "price": 188,
       "desc": "",
@@ -568,7 +568,7 @@
     },
     {
       "id": "p914dbe468d52",
-      "categoryId": "catfe0049a5a6",
+      "categoryId": "catad7a3b5d5f",
       "name": "红色洛丽塔高跟小皮鞋",
       "price": 158,
       "desc": "",
@@ -579,7 +579,7 @@
     },
     {
       "id": "p09130149ee6e",
-      "categoryId": "catfe0049a5a6",
+      "categoryId": "catad7a3b5d5f",
       "name": "黑色平地小皮鞋",
       "price": 148,
       "desc": "",
@@ -590,7 +590,7 @@
     },
     {
       "id": "pc0759fac5dd3",
-      "categoryId": "catfe0049a5a6",
+      "categoryId": "catad7a3b5d5f",
       "name": "肉色高跟鞋",
       "price": 188,
       "desc": "",
@@ -608,42 +608,6 @@
       "images": [
         "assets/products/pabffd694ddb8-1790504484191.webp"
       ],
-      "visible": true
-    },
-    {
-      "id": "pf5e03f9d6154",
-      "categoryId": "catfe0049a5a6",
-      "name": "新商品",
-      "price": 0,
-      "desc": "",
-      "images": [],
-      "visible": true
-    },
-    {
-      "id": "p09da45750a53",
-      "categoryId": "catfe0049a5a6",
-      "name": "新商品",
-      "price": 0,
-      "desc": "",
-      "images": [],
-      "visible": true
-    },
-    {
-      "id": "pc1829c579b46",
-      "categoryId": "catfe0049a5a6",
-      "name": "新商品",
-      "price": 0,
-      "desc": "",
-      "images": [],
-      "visible": true
-    },
-    {
-      "id": "p66f6760b25d1",
-      "categoryId": "catfe0049a5a6",
-      "name": "新商品",
-      "price": 0,
-      "desc": "",
-      "images": [],
       "visible": true
     }
   ],
