@@ -3,58 +3,35 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <title>店铺管理端</title>
-  <link rel="stylesheet" href="admin.css">
+  <title>店铺菜单</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="top"><div><h1>店铺管理端</h1><p>改完商品后点击「一键发布」，公开菜单会更新。</p></div><a id="siteLink" class="ghost" target="_blank" rel="noreferrer">打开顾客菜单</a></header>
-<main class="wrap">
-  <section class="panel setup">
-    <div class="panel-title"><h2>一次性配置</h2><span id="status" class="status">未连接</span></div>
-    <div class="grid three">
-      <label>GitHub 用户名<input id="owner" placeholder="例如 zhangsan"></label>
-      <label>仓库名<input id="repo" placeholder="例如 my-store"></label>
-      <label>分支<input id="branch" value="main"></label>
+  <header class="header">
+    <h1 id="storeName">加载中...</h1>
+    <p id="storeNotice" class="notice"></p>
+  </header>
+
+  <nav id="categoryBar" class="category-bar"></nav>
+
+  <main>
+    <div id="products" class="products"></div>
+    <p id="empty" class="empty" hidden>这个分类暂时没有商品</p>
+  </main>
+
+  <div id="productModal" class="modal" hidden>
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+      <button id="modalClose" class="modal-close">×</button>
+      <div id="modalImageWrap" class="modal-image"></div>
+      <h2 id="modalTitle"></h2>
+      <div id="modalPrice" class="modal-price"></div>
+      <p id="modalDesc" class="modal-desc"></p>
     </div>
-    <label>GitHub Fine-grained Token <input id="token" type="password" placeholder="github_pat_..."></label>
-    <div class="hint">Token 只保存在你自己的浏览器里，不会写进商品文件。令牌需要对这个仓库有 Contents → Read and write 权限。GitHub 官方 API 支持用该权限创建/更新仓库文件。<a href="https://docs.github.com/en/rest/repos/contents" target="_blank" rel="noreferrer">查看官方说明</a></div>
-    <div class="actions"><button id="saveConfig" class="primary">保存配置</button><button id="loadRemote">读取店铺</button></div>
-  </section>
+  </div>
 
-  <section class="panel">
-    <div class="panel-title"><h2>店铺信息</h2></div>
-    <div class="grid two"><label>店铺名称<input id="storeName"></label><label>店铺公告<textarea id="notice" rows="3"></textarea></label></div>
-  </section>
+  <button id="shareBtn" class="share-btn">分享菜单</button>
 
-  <section class="panel">
-    <div class="panel-title"><h2>商品分类</h2><button id="addCategory" class="secondary">+ 新建分类</button></div>
-    <div id="categoryList" class="category-list"></div>
-  </section>
-
-  <section class="panel">
-    <div class="panel-title"><h2>商品</h2><button id="addProduct" class="primary">+ 创建商品</button></div>
-    <div id="productList" class="product-list"></div>
-  </section>
-
-  <section class="publish panel">
-    <div><h2>准备好了？</h2><p id="publishText">把店铺信息、分类和商品改好，然后一键发布。</p></div>
-    <button id="publish" class="publish-btn">一键发布</button>
-  </section>
-</main>
-
-<template id="productTemplate">
-  <article class="product-edit">
-    <div class="product-head"><strong class="product-index"></strong><div class="head-actions"><button class="secondary move-top" type="button">置顶</button><button class="danger delete-product" type="button">删除</button></div></div>
-    <div class="grid two"><label>商品名称<input class="p-name"></label><label>价格（元）<input class="p-price" type="number" min="0" step="0.01"></label></div>
-    <label>所属分类<select class="p-category"></select></label>
-    <label>商品介绍<textarea class="p-desc" rows="3" placeholder="例如：规格、卖点、说明"></textarea></label>
-    <label>商品图片 <input class="p-images" type="file" accept="image/*" multiple></label>
-    <div class="image-row"></div>
-    <label class="switch"><input class="p-visible" type="checkbox"><span>在顾客菜单中显示</span></label>
-  </article>
-</template>
-
-<div id="toast" class="toast" hidden></div>
-<script src="admin.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
