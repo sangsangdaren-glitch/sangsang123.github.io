@@ -1,6 +1,25 @@
 {
   "shopName": "我的小店",
   "announcement": "欢迎光临！",
-  "categories": [],
-  "products": []
+  "categories": [
+    {
+      "id": "catfe0049a5a6",
+      "name": "香香软软的原味袜子"
+    }
+  ],
+  "products": [
+    {
+      "id": "p09f71990f613",
+      "categoryId": "catfe0049a5a6",
+      "name": "白袜",
+      "price": 38,
+      "desc": "",
+      "images": [
+        "assets/products/p09f71990f613-1790498812784.webp"
+      ],
+      "visible": true
+    }
+  ],
+  "storeName": "桑桑的原味闲置",
+  "notice": "下单后请私聊我哦"
 }
